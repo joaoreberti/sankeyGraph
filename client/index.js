@@ -1,7 +1,7 @@
 
 let labels = []
 let values = []
-fetch("http://localhost:3001/getValues")
+fetch(window.location.host+"getValues")
 .then((result => result.json())
 ).then(data => data.map(item => {
   labels.push(item.field)
