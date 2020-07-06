@@ -3,7 +3,7 @@ let labels = []
 let values = []
 
 console.log(window.location)
-fetch('http://'+window.location.hostname+':3010/getValues')
+fetch('http://'+"joaoreberti.tech"+':3010/getValues')
 .then((result => result.json())
 ).then(data => data.map(item => {
   labels.push(item.field)
