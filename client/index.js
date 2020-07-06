@@ -8,7 +8,8 @@ fetch('http://joaoreberti.tech:3010/getValues')
 ).then(data => data.map(item => {
   labels.push(item.field)
   values.push(item.value)
-
+  console.log('joao', labels);
+  console.log('reberti',values)
 
   var data = {
     type: "sankey",
