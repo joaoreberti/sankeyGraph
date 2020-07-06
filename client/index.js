@@ -1,7 +1,9 @@
 
 let labels = []
 let values = []
-fetch(window.location.host+"getValues")
+
+console.log(window.location)
+fetch('http://'+window.location.hostname+':3010/getValues')
 .then((result => result.json())
 ).then(data => data.map(item => {
   labels.push(item.field)
