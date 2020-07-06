@@ -70,10 +70,10 @@ app.post('/update', (req, res)=>{
 
 
 const keys = [
-    {field: "Applied", value : 0},
-    {field: "No reply", value : 0},
+    {field: "Applied", value : 16},
+    {field: "No reply", value : 14},
     {field: "Rejected", value : 0},
-    {field: "1st round", value : 0},
+    {field: "1st round", value : 1},
     {field: "2nd round", value : 0},
     {field: "3rd round", value : 0},
     {field: "4th round", value : 0},

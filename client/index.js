@@ -26,8 +26,8 @@ fetch('http://joaoreberti.tech:3010/getValues')
     },
   
     link: {
-      source: [0,0, 0,0,0,0,0,0 ],
-      target: [1,2, 3, 4,5,6,7,8],
+      source: [0, 0, 0, 0, 0, 0, 0, 0 ],
+      target: [1, 2, 3, 4, 5, 6, 7, 8 ],
       value:  values
     }
   }
