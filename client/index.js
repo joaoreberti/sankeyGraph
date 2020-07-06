@@ -1,4 +1,14 @@
-var data = {
+
+let labels = []
+let values = []
+fetch("http://localhost:3001/getValues")
+.then((result => result.json())
+).then(data => data.map(item => {
+  labels.push(item.field)
+  values.push(item.value)
+
+
+  var data = {
     type: "sankey",
     orientation: "h",
     node: {
@@ -8,14 +18,14 @@ var data = {
         color: "black",
         width: 0.5
       },
-     label: ["Applied", "No reply", "Rejected", "1st round", "2sn round", "3rd round", "4th round", "5th round", "Offer"],
+     label: labels,
      color: ["blue", "blue", "blue", "blue", "blue", "blue"]
-        },
+    },
   
     link: {
       source: [0,0, 0,0,0,0,0,0 ],
       target: [1,2, 3, 4,5,6,7,8],
-      value:  [15,2, 1, 5, 2,2,2,1]
+      value:  values
     }
   }
   
@@ -28,5 +38,16 @@ var data = {
     }
   }
   
-  Plotly.react('myDiv', data, layout)
+
   
+
+  Plotly.react('myDiv', data, layout)
+}))
+
+
+
+
+console.log('joao', labels)
+console.log('joao', values)
+
+
