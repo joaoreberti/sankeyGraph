@@ -9,7 +9,7 @@ fetch('http://joaoreberti.tech:3010/getValues')
   
   
   data.map(item => {
-    if(item.field ==='Applied'){
+    if(item.field == 'Applied'){
       labels.push(item.field)
 
     }else{
