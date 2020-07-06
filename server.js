@@ -81,6 +81,30 @@ const keys = [
     {field: "Offer", value : 0},
 
 ]
+app.post('/startFromScratch', (req, res)=>{
+    console.log(req.body)
+    let newRecord = req.body
+    MongoClient.connect(url, function(err, client) {
+        assert.equal(null, err);
+        console.log("Connected successfully to server");
+       
+        const db = client.db(dbName);
+       
+        insertDocuments(db, function(err, result){
+          if(err){return console.log(err)}
+          console.log(result)
+          res.send(200)
+          client.close()
+
+        }, keys)
+       
+        
+      });
+
+
+})
+
+
 const insertDocuments = function(db, callback, records) {
     // Get the documents collection
     const collection = db.collection('documents');
