@@ -9,19 +9,12 @@ fetch('http://joaoreberti.tech:3010/getValues')
   
   
   data.map(item => {
-    if(item.field === 'Applied'){
-      labels.push(item.field)
+  labels.push(item.field)
+  values.push(item.value)
+  console.log('joao', labels);
+  console.log('reberti',values)
 
-    }else{
-      labels.push(item.field)
-  
-      values.push(item.value)
-      console.log('joao', labels);
-      console.log('reberti',values)
-    }
- 
-
-})})
+})
 
 
 
@@ -59,6 +52,11 @@ var layout = {
 
 
 Plotly.react('myDiv', data, layout)
+
+
+}
+
+
 )
 
 
